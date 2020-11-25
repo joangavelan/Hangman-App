@@ -1,5 +1,6 @@
 import Home from "./home.js";
 import {sound} from "./../data/sound.js";
+import End from "./end.js";
 
 const Game = ( _ => {
 
@@ -67,12 +68,18 @@ const Game = ( _ => {
         //if won, then alert("win");
         if(hasWon()) {
             sound.win.play();
-            alert('You won');
+            End.setState({
+                chosenWord,
+                result: "win"
+            });
         }
         //if lost, then alert("lost");
         if(hasLost()) {
             sound.lose.play();
-            alert('You lose')
+            End.setState({
+                chosenWord,
+                result: "lose"
+            });
         }
     }
 
