@@ -102,7 +102,16 @@ body {
   padding: 1rem 1.8rem;
   font-family: var(--font-body-stack);
   color: var(--light-white);
-  text-align: center;
+  list-style-type: none;
+}
+
+.how li::before {
+  content: "\2022";
+  color: var(--light-yellow);
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
 }
 
 /* end screen */
